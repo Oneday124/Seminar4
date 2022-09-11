@@ -12,7 +12,6 @@ void FillArray(int[] array)
         array[i] = new Random().Next(0,10);
     }
 }
-
 int Check(int[] array)
 {
 int sumOdd = 0;
