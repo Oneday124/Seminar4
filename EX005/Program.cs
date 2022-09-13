@@ -9,16 +9,22 @@ void FillArray(int[] array)
     for(int i = 0; i < array.Length; i++)
     array[i] = new Random().Next(0, 10);
 }
+void Mult (int[] array, int i, int j)
+{
+    while (i < array.Length / 2)
+    {
+        int mult = array[i] * array[j];
+        Console.WriteLine(mult); 
+        j = j - 1;   
+        i++;  
+    }    
+}
 
-int[] array = new int[5];
+int lenght = new Random().Next(0,10);
+int[] array = new int[lenght];
 FillArray(array);
 PrintArray(array);
 Console.WriteLine();
 
-for(int i = 0; i < array.Length; i++)
-{
-    int num1 = array[i];
-    int num2 = array[5 - i];
-    int mult = num1 * num2;
-    Console.WriteLine(mult);
-}
+Mult(array, 0, array.Length - 1);
+ 
